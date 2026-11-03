@@ -34,9 +34,23 @@ Paste the lines that show the image change, and the `Plan:` line.
 ## Part 3: plan that found the drift after `kubectl scale`
 
 ```
+  # kubernetes_deployment_v1.hello will be updated in-place
+  ~ resource "kubernetes_deployment_v1" "hello" {
+        id               = "default/hello-app"
+        # (1 unchanged attribute hidden)
 
+      ~ spec {
+          ~ replicas                  = "5" -> "3"
+            # (4 unchanged attributes hidden)
+
+            # (3 unchanged blocks hidden)
+        }
+
+        # (1 unchanged block hidden)
+    }
+
+Plan: 0 to add, 1 to change, 0 to destroy.
 ```
-
 ## Part 4: `kubectl get svc -A` showing dev and prod
 
 ```
