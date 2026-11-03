@@ -54,7 +54,11 @@ Plan: 0 to add, 1 to change, 0 to destroy.
 ## Part 4: `kubectl get svc -A` showing dev and prod
 
 ```
-
+NAMESPACE     NAME         TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)                  AGE
+default       kubernetes   ClusterIP      10.96.0.1      <none>        443/TCP                  95m
+dev           hello-app    LoadBalancer   10.96.3.240    172.18.0.2    8080:31700/TCP           26m
+kube-system   kube-dns     ClusterIP      10.96.0.10     <none>        53/UDP,53/TCP,9153/TCP   95m
+prod          hello-app    LoadBalancer   10.96.192.69   172.18.0.8    8090:31942/TCP           12s
 ```
 
 ## Break it: the error after deleting `terraform.tfstate`
