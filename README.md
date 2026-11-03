@@ -64,7 +64,7 @@ prod          hello-app    LoadBalancer   10.96.192.69   172.18.0.8    8090:3194
 ## Break it: the error after deleting `terraform.tfstate`
 
 ```
-
+Error: namespaces "dev" already exists
 ```
 
 ## Break it: the wrong selector
