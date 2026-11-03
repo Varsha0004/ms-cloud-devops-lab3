@@ -71,8 +71,16 @@ Error: namespaces "dev" already exists
 
 What did you see, and how did you find the cause? One or two sentences.
 
-
+The plan showed the Service selector changing from hello-app to helo-app, and apply finished with no error. But the dev page showed an error. kubectl get endpointslices -n dev showed an empty EndpointSlice, because the selector matched no Pods. Terraform checks that the cluster matches the code, not that the code is correct. I fixed the typo, applied again, and the page recovered.
 
 ## Screenshot
 
 Save a browser screenshot as `screenshot.png` in the repository root.
+
+Dev (namespace dev, port 8080):
+
+![Dev page](s1.png)
+
+Prod (namespace prod, port 8090):
+
+![Prod page](s2.png)
