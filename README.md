@@ -15,7 +15,7 @@ Plan: 2 to add, 0 to change, 0 to destroy.
 ## Part 1: `terraform output -raw url`
 
 ```
-<http://localhost:8080/>
+http://localhost:8080/
 ```
 
 ## Part 2: plan for the v1 → v2 image change
