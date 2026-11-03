@@ -1,21 +1,21 @@
 # Lab 3 — hello-app on Kubernetes with Terraform
 
-Name:
+Name:Varsha H
 
-Roll number:
+Roll number:261100680003
 
 ## Part 1: first `terraform plan`
 
 Paste the `Plan:` line and the summary above it.
 
 ```
-
+Plan: 2 to add, 0 to change, 0 to destroy.
 ```
 
 ## Part 1: `terraform output -raw url`
 
 ```
-
+[text](http://localhost:8080/)
 ```
 
 ## Part 2: plan for the v1 → v2 image change
